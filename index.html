@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vat Mardel — Vapeás hoy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85,400;85,500;85,600;85,700;85,800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="preloader" class="preloader" aria-hidden="true">
+  <div class="preloader__panel preloader__panel--l"></div>
+  <div class="preloader__panel preloader__panel--r"></div>
+  <div class="preloader__center">
+    <div class="preloader__mark">VAT MARDEL<span class="preloader__dot">.</span></div>
+    <div class="preloader__bar"><div class="preloader__bar-fill"></div></div>
+  </div>
+</div>
+<div class="page">
+
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__brand">
+        <span class="header__name">Vat Mardel</span>
+        <span class="header__status"><span class="header__dot"></span>Abierto · lun a sáb 10–20</span>
+      </div>
+      <div class="header__right">
+        <div class="header__links">
+          <a href="https://www.google.com/maps/search/?api=1&query=Talcahuano%2094%20Mar%20del%20Plata" target="_blank" rel="noopener">Talcahuano 94</a>
+          <a href="https://wa.me/542236947306" target="_blank" rel="noopener">223 694-7306</a>
+        </div>
+        <button id="header-cart" class="header__cart" type="button" aria-label="Ver carrito">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 8h12l-1.2 11a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 8Z" />
+            <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+          </svg>
+          <span id="header-cart-count" class="header__cart-count" hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="catalog-view">
+
+    <section class="hero">
+      <div>
+        <h1 class="hero__title">Vapeás<br />hoy<span class="dot">.</span></h1>
+        <p class="hero__desc">Elfbar, Waka e Ignite con stock real. Elegís acá, y el pedido se cierra por WhatsApp — sin tarjeta ni cuenta.</p>
+        <div class="hero__meta">
+          <div class="hero__meta-item"><strong>Envío por Uber</strong>en el día, toda la ciudad</div>
+          <div class="hero__meta-item"><strong>Retiro por local</strong>Talcahuano 94</div>
+        </div>
+      </div>
+      <div class="hero__image">
+        <div id="hero-carousel" class="hero-carousel">
+          <div class="hero-carousel__slide is-active" data-accent="purple">
+            <div class="img-slot">
+              <svg class="vape-icon" viewBox="0 0 60 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="22" y="0" width="16" height="18" rx="5" fill="currentColor" />
+                <rect x="4" y="14" width="52" height="116" rx="22" fill="currentColor" />
+                <rect class="vape-icon__accent" x="4" y="58" width="52" height="16" />
+                <circle class="vape-icon__dot" cx="30" cy="112" r="3.5" />
+              </svg>
+            </div>
+          </div>
+          <div class="hero-carousel__slide" data-accent="green">
+            <div class="img-slot">
+              <svg class="vape-icon" viewBox="0 0 60 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="22" y="0" width="16" height="18" rx="5" fill="currentColor" />
+                <rect x="4" y="14" width="52" height="116" rx="22" fill="currentColor" />
+                <rect class="vape-icon__accent" x="4" y="50" width="52" height="16" />
+                <circle class="vape-icon__dot" cx="30" cy="104" r="3.5" />
+              </svg>
+            </div>
+          </div>
+          <div class="hero-carousel__slide" data-accent="amber">
+            <div class="img-slot">
+              <svg class="vape-icon" viewBox="0 0 60 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="22" y="0" width="16" height="18" rx="5" fill="currentColor" />
+                <rect x="4" y="14" width="52" height="116" rx="22" fill="currentColor" />
+                <rect class="vape-icon__accent" x="4" y="66" width="52" height="16" />
+                <circle class="vape-icon__dot" cx="30" cy="120" r="3.5" />
+              </svg>
+            </div>
+          </div>
+          <div class="hero-carousel__slide" data-accent="blue">
+            <div class="img-slot">
+              <svg class="vape-icon" viewBox="0 0 60 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="22" y="0" width="16" height="18" rx="5" fill="currentColor" />
+                <rect x="4" y="14" width="52" height="116" rx="22" fill="currentColor" />
+                <rect class="vape-icon__accent" x="4" y="58" width="52" height="16" />
+                <circle class="vape-icon__dot" cx="30" cy="112" r="3.5" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div id="hero-carousel-dots" class="hero-carousel__dots"></div>
+      </div>
+    </section>
+
+    <div class="filterbar">
+      <div class="filterbar__inner">
+        <div id="tabs" role="tablist"></div>
+        <div class="filterbar__spacer"></div>
+        <input id="search" class="filterbar__search" type="text" placeholder="Buscar sabor…" autocomplete="off" />
+      </div>
+    </div>
+
+    <section class="catalog">
+      <div id="grid" class="grid"></div>
+      <div id="no-results" class="no-results" hidden>
+        No tenemos ese sabor cargado.<br />
+        <a href="https://wa.me/542236947306" target="_blank" rel="noopener">Preguntanos por WhatsApp</a>
+      </div>
+      <div class="disclaimer">Venta exclusiva a mayores de 18 años. Los productos con nicotina generan adicción.</div>
+    </section>
+
+  </div>
+
+  <section id="product-view" class="product-view" hidden>
+    <div class="product-view__inner">
+      <a href="#/" class="product-view__back">← Volver al catálogo</a>
+
+      <div class="product-view__layout">
+        <div class="product-view__image">
+          <div class="img-slot">
+            <svg class="vape-icon" viewBox="0 0 60 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="22" y="0" width="16" height="18" rx="5" fill="currentColor" />
+              <rect x="4" y="14" width="52" height="116" rx="22" fill="currentColor" />
+              <rect class="vape-icon__accent" x="4" y="58" width="52" height="16" />
+              <circle class="vape-icon__dot" cx="30" cy="112" r="3.5" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="product-view__info">
+          <div id="pv-cat" class="product-view__cat"></div>
+          <h1 id="pv-flavor" class="product-view__title"></h1>
+          <div id="pv-price" class="product-view__price"></div>
+          <div class="product-view__stock"><span class="header__dot"></span>En stock — listo para envío hoy</div>
+          <p id="pv-desc" class="product-view__desc"></p>
+
+          <div id="pv-stepper-wrap" class="product-view__qty-row"></div>
+          <a id="pv-whatsapp" class="product-view__whatsapp" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+
+          <div class="product-view__meta">
+            <div class="hero__meta-item"><strong>Envío por Uber</strong>en el día, toda la ciudad</div>
+            <div class="hero__meta-item"><strong>Retiro por local</strong>Talcahuano 94</div>
+          </div>
+
+          <table id="pv-specs" class="product-view__specs"></table>
+        </div>
+      </div>
+
+      <div class="product-view__related">
+        <h2 class="product-view__related-title">También te puede interesar</h2>
+        <div id="pv-related" class="grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="cartbar" class="cartbar" hidden>
+    <div class="cartbar__inner">
+      <div>
+        <div id="cartbar-count" class="cartbar__count"></div>
+        <div id="cartbar-total" class="cartbar__total"></div>
+      </div>
+      <button id="cartbar-cta" class="cartbar__cta">Pedir por WhatsApp</button>
+    </div>
+  </div>
+
+  <div id="checkout-overlay" class="overlay overlay--checkout" hidden>
+    <div class="checkout">
+      <div class="checkout__head">
+        <div class="checkout__title">Tu pedido</div>
+        <button id="checkout-close" class="checkout__close">✕</button>
+      </div>
+
+      <div id="checkout-lines" class="checkout__lines"></div>
+
+      <input id="field-name" class="field" type="text" placeholder="Tu nombre" autocomplete="off" />
+
+      <div class="pillrow">
+        <button id="pick-envio" class="pill pill--grow">Envío por Uber</button>
+        <button id="pick-retiro" class="pill pill--grow">Retiro en el local</button>
+      </div>
+
+      <input id="field-addr" class="field" type="text" placeholder="Dirección y barrio" autocomplete="off" />
+
+      <div id="payments" class="pillrow pillrow--wrap"></div>
+
+      <div class="msgbox">
+        <div class="msgbox__label">Mensaje que se envía</div>
+        <div id="msgbox-text" class="msgbox__text"></div>
+      </div>
+
+      <a id="checkout-send" class="checkout__send" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a>
+      <div class="checkout__note">Nunca pedimos datos de tarjeta. El pago se coordina por chat.</div>
+    </div>
+  </div>
+
+  <div id="sent-overlay" class="overlay overlay--sent" hidden>
+    <div class="sent">
+      <div class="sent__icon"></div>
+      <div class="sent__title">Te llevamos al chat</div>
+      <div class="sent__body">Tu pedido ya está escrito en WhatsApp. Mandalo y te confirmamos stock y envío.</div>
+      <button id="sent-reset" class="sent__btn">Seguir mirando</button>
+    </div>
+  </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
